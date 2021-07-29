@@ -1,10 +1,11 @@
 # Wine/Lutris contained<br/><i>Containerize Wine and Lutris!</i>
 
 ## Prerequisites
-1. [docker]
-2. [docker-compose]
+1. [Docker](https://docs.docker.com/get-started/)
+2. [Docker Compose](https://docs.docker.com/compose/install/)
 3. git
-4. [docker-rootless]
+4. xorg-xhost
+5. [docker-rootless](https://docs.docker.com/engine/security/rootless/)
     - not necessary
 
 ## How to use
