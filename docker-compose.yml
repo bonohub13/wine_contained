@@ -1,0 +1,19 @@
+version: '3'
+services:
+  wine-contained:
+    build: # ./wine-contained
+      context: wine-contained
+      args:
+        - UNAME=$UNAME
+        - UID=$UID
+        - GID=$GID
+        - XAUTH_TOKEN=$XAUTH_TOKEN
+    image: wine-contained
+    container_name: lutris-contained
+    tty: true
+    environment: 
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=$XAUTHORITY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
